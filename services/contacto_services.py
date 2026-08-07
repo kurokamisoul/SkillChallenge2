@@ -47,8 +47,7 @@ def registrar_contacto(contactos, archivo):
         guardar_json(contactos, archivo)
     return contacto
 
-def registrar_contactos_automaticamente(archivo):
-    contactos=[]
+def registrar_contactos_automaticamente(archivo, contactos):
     for _ in range(TOTAL_CONTACTOS):
         telefono = fake.random_number(digits=10, fix_len=True)
         contacto=crear_contacto(generar_id(contactos), fake.name(),telefono , fake.email(), date.today().strftime('%d/%m/%Y'))

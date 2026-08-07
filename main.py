@@ -23,7 +23,7 @@ def menu_contactos():
             case '5':
                 contactos=cargar_contactos_json(contactos)
             case '6'    :
-                contactos=registrar_contactos_automaticamente(archivo)
+                contactos=registrar_contactos_automaticamente(archivo,contactos)
             case '7':
                 archivo=guardar_json(contactos,archivo)    
             case '8':
